@@ -73,54 +73,93 @@ class SegmentedCircleBorder extends ShapeBorder {
     ].reduce(max);
     double innerRadius = rect.shortestSide / 2.0 - widestSide;
     return Path()
-      ..addArc(
+      ..arcTo(
           Rect.fromCircle(center: rect.center, radius: innerRadius + top.width),
           radians(247.5 + offset),
-          radians(45))
-      ..lineTo(rect.center.dx + cos(radians(292.5 + offset)) * (innerRadius + topRight.width),
-          rect.center.dy + sin(radians(292.5 + offset)) * (innerRadius + topRight.width))
-      ..addArc(
-          Rect.fromCircle(center: rect.center, radius: innerRadius + topRight.width),
+          radians(45),
+          false)
+      ..lineTo(
+          rect.center.dx +
+              cos(radians(292.5 + offset)) * (innerRadius + topRight.width),
+          rect.center.dy +
+              sin(radians(292.5 + offset)) * (innerRadius + topRight.width))
+      ..arcTo(
+          Rect.fromCircle(
+              center: rect.center, radius: innerRadius + topRight.width),
           radians(292.5 + offset),
-          radians(45))
-      ..lineTo(rect.center.dx + cos(radians(337.5 + offset)) * (innerRadius + right.width),
-          rect.center.dy + sin(radians(337.5 + offset)) * (innerRadius + right.width))
-      ..addArc(
-          Rect.fromCircle(center: rect.center, radius: innerRadius + right.width),
+          radians(45),
+          false)
+      ..lineTo(
+          rect.center.dx +
+              cos(radians(337.5 + offset)) * (innerRadius + right.width),
+          rect.center.dy +
+              sin(radians(337.5 + offset)) * (innerRadius + right.width))
+      ..arcTo(
+          Rect.fromCircle(
+              center: rect.center, radius: innerRadius + right.width),
           radians(337.5 + offset),
-          radians(45))
-      ..lineTo(rect.center.dx + cos(radians(22.5 + offset)) * (innerRadius + bottomRight.width),
-          rect.center.dy + sin(radians(22.5 + offset)) * (innerRadius + bottomRight.width))
-      ..addArc(
-          Rect.fromCircle(center: rect.center, radius: innerRadius + bottomRight.width),
+          radians(45),
+          false)
+      ..lineTo(
+          rect.center.dx +
+              cos(radians(22.5 + offset)) * (innerRadius + bottomRight.width),
+          rect.center.dy +
+              sin(radians(22.5 + offset)) * (innerRadius + bottomRight.width))
+      ..arcTo(
+          Rect.fromCircle(
+              center: rect.center, radius: innerRadius + bottomRight.width),
           radians(22.5 + offset),
-          radians(45))
-      ..lineTo(rect.center.dx + cos(radians(67.5 + offset)) * (innerRadius + bottom.width),
-          rect.center.dy + sin(radians(67.5 + offset)) * (innerRadius + bottom.width))
-      ..addArc(
-          Rect.fromCircle(center: rect.center, radius: innerRadius + bottom.width),
+          radians(45),
+          false)
+      ..lineTo(
+          rect.center.dx +
+              cos(radians(67.5 + offset)) * (innerRadius + bottom.width),
+          rect.center.dy +
+              sin(radians(67.5 + offset)) * (innerRadius + bottom.width))
+      ..arcTo(
+          Rect.fromCircle(
+              center: rect.center, radius: innerRadius + bottom.width),
           radians(67.5 + offset),
-          radians(45))
-      ..lineTo(rect.center.dx + cos(radians(112.5 + offset)) * (innerRadius + bottomLeft.width),
-          rect.center.dy + sin(radians(112.5 + offset)) * (innerRadius + bottomLeft.width))
-      ..addArc(
-          Rect.fromCircle(center: rect.center, radius: innerRadius + bottomLeft.width),
+          radians(45),
+          false)
+      ..lineTo(
+          rect.center.dx +
+              cos(radians(112.5 + offset)) * (innerRadius + bottomLeft.width),
+          rect.center.dy +
+              sin(radians(112.5 + offset)) * (innerRadius + bottomLeft.width))
+      ..arcTo(
+          Rect.fromCircle(
+              center: rect.center, radius: innerRadius + bottomLeft.width),
           radians(112.5 + offset),
-          radians(45))
-      ..lineTo(rect.center.dx + cos(radians(157.5 + offset)) * (innerRadius + left.width),
-          rect.center.dy + sin(radians(157.5 + offset)) * (innerRadius + left.width))
-      ..addArc(
-          Rect.fromCircle(center: rect.center, radius: innerRadius + left.width),
+          radians(45),
+          false)
+      ..lineTo(
+          rect.center.dx +
+              cos(radians(157.5 + offset)) * (innerRadius + left.width),
+          rect.center.dy +
+              sin(radians(157.5 + offset)) * (innerRadius + left.width))
+      ..arcTo(
+          Rect.fromCircle(
+              center: rect.center, radius: innerRadius + left.width),
           radians(157.5 + offset),
-          radians(45))
-      ..lineTo(rect.center.dx + cos(radians(202.5 + offset)) * (innerRadius + topLeft.width),
-          rect.center.dy + sin(radians(202.5 + offset)) * (innerRadius + topLeft.width))
-      ..addArc(
-          Rect.fromCircle(center: rect.center, radius: innerRadius + topLeft.width),
+          radians(45),
+          false)
+      ..lineTo(
+          rect.center.dx +
+              cos(radians(202.5 + offset)) * (innerRadius + topLeft.width),
+          rect.center.dy +
+              sin(radians(202.5 + offset)) * (innerRadius + topLeft.width))
+      ..arcTo(
+          Rect.fromCircle(
+              center: rect.center, radius: innerRadius + topLeft.width),
           radians(202.5 + offset),
-          radians(45))
-      ..lineTo(rect.center.dx + cos(radians(247.5 + offset)) * (innerRadius + top.width),
-          rect.center.dy + sin(radians(247.5 + offset)) * (innerRadius + top.width));
+          radians(45),
+          false)
+      ..lineTo(
+          rect.center.dx +
+              cos(radians(247.5 + offset)) * (innerRadius + top.width),
+          rect.center.dy +
+              sin(radians(247.5 + offset)) * (innerRadius + top.width));
   }
 
   @override
@@ -213,20 +252,6 @@ class SegmentedCircleBorder extends ShapeBorder {
       bottomLeft: bottomLeft.scale(t),
       left: left.scale(t),
       topLeft: topLeft.scale(t));
-
-  @override
-  bool operator ==(dynamic other) {
-    if (runtimeType != other.runtimeType) return false;
-    final SegmentedCircleBorder typedOther = other;
-    return top == typedOther.top &&
-        topRight == typedOther.topRight &&
-        right == typedOther.right &&
-        bottomRight == typedOther.bottomRight &&
-        bottom == typedOther.bottom &&
-        bottomLeft == typedOther.bottomLeft &&
-        left == typedOther.left &&
-        topLeft == typedOther.topLeft;
-  }
 
   @override
   String toString() {
