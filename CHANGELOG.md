@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [1.0.0] - Initial Release
 
-* TODO: Describe initial release.
+* Provides a segmented circle border which provides individual eighths of the circle, and offset to allow re-alignment of segments.
