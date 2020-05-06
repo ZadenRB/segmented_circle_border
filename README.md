@@ -1,14 +1,39 @@
 # segmented_circle_border
 
-A new Flutter package project.
+![](https://raw.githubusercontent.com/ZadenRB/segmented_circle_border/master/Segmented%20Circle%20Border.png)
+
+A package for creating segmented circle borders in flutter.
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+Add the package to your `pubspec.yaml`:
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+`segmented_circle_border: ^1.0.1 `
+
+Add it as a border:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:segmented_circle_border/segmented_circle_border.dart';
+
+void main() => runApp(SegmentedCircleBorderExample());
+
+class SegmentedCircleBorderExample extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) => Material(
+      shape: SegmentedCircleBorder(
+        top: BorderSide(color: Color(0xFFFF0000), width: 10.0),
+        topRight: BorderSide(color: Color(0xFF00FF00), width: 1.0),
+        right: BorderSide(color: Color(0xFF0000FF), width: 2.0),
+        bottomRight: BorderSide(color: Color(0xFFFF0000), width: 3.0),
+        bottom: BorderSide(color: Color(0xFF00FF00), width: 4.0),
+        bottomLeft: BorderSide(color: Color(0xFF0000FF), width: 5.0),
+        left: BorderSide(color: Color(0xFFFF00000), width: 6.0),
+        topLeft: BorderSide(color: Color(0xFF00FF00), width: 7.0),
+      ),
+      child: Container(
+        width: 100,
+        height: 100,
+      ));
+}
+```
