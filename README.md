@@ -13,6 +13,8 @@ Add the package to your `pubspec.yaml`:
 Add it as a border:
 
 ```dart
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:segmented_circle_border/segmented_circle_border.dart';
 
@@ -22,7 +24,7 @@ class SegmentedCircleBorderExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Material(
       shape: SegmentedCircleBorder(
-          offset: 0.0,
+          offset: -(112.5 * pi / 180),
           numberOfSegments: 8,
           sides: <BorderSide>[
             BorderSide(color: Color(0xFFFF0000), width: 10.0),
