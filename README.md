@@ -8,7 +8,7 @@ A package for creating segmented circle borders in flutter.
 
 Add the package to your `pubspec.yaml`:
 
-`segmented_circle_border: ^2.0.0` 
+`segmented_circle_border: ^2.0.1` 
 
 Add it as a border:
 

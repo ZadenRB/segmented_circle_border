@@ -1,3 +1,6 @@
+## [2.0.1] - Add Necessary Null Checks
+* Adds null check assertions.
+
 ## [2.0.0] - Support for Any Number of Segments
 * Adds support for any number of segments by instead passing a list of `BorderSides` and argument for the number of segments.
 

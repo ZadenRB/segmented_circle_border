@@ -8,10 +8,12 @@ class SegmentedCircleBorder extends ShapeBorder {
   /// Creates a segmented circle border.
   ///
   /// Length of [sides] must be less than [numberOfSegments].
-  SegmentedCircleBorder({this.sides, this.numberOfSegments, this.offset = 0.0}) {
+  SegmentedCircleBorder({this.offset = 0.0, this.numberOfSegments, this.sides}) {
     for (int i = sides.length; i < numberOfSegments; i++) {
       sides.add(BorderSide.none);
     }
+    assert(sides != null);
+    assert(sides.length <= numberOfSegments);
   }
 
   /// The angle to offset each segment by. An offset of zero
