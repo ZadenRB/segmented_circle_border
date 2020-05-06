@@ -1,6 +1,6 @@
 name: segmented_circle_border
 description: A package for creating segmented circle borders in flutter.
-version: 1.0.1
+version: 2.0.0
 homepage: http://github.com/ZadenRB/segmented_circle_border
 
 environment:

@@ -1,3 +1,6 @@
+## [2.0.0] - Support for Any Number of Segments
+* Adds support for any number of segments by instead passing a list of `BorderSides` and argument for the number of segments.
+
 ## [1.0.1] - Path Bugfix
 * Fix clipping bug due to subpaths being created by addArc by using arcTo instead
 * Remove custom `==` operator

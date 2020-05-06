@@ -8,7 +8,7 @@ A package for creating segmented circle borders in flutter.
 
 Add the package to your `pubspec.yaml`:
 
-`segmented_circle_border: ^1.0.1 `
+`segmented_circle_border: ^2.0.0` 
 
 Add it as a border:
 
@@ -22,15 +22,18 @@ class SegmentedCircleBorderExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Material(
       shape: SegmentedCircleBorder(
-        top: BorderSide(color: Color(0xFFFF0000), width: 10.0),
-        topRight: BorderSide(color: Color(0xFF00FF00), width: 1.0),
-        right: BorderSide(color: Color(0xFF0000FF), width: 2.0),
-        bottomRight: BorderSide(color: Color(0xFFFF0000), width: 3.0),
-        bottom: BorderSide(color: Color(0xFF00FF00), width: 4.0),
-        bottomLeft: BorderSide(color: Color(0xFF0000FF), width: 5.0),
-        left: BorderSide(color: Color(0xFFFF00000), width: 6.0),
-        topLeft: BorderSide(color: Color(0xFF00FF00), width: 7.0),
-      ),
+          offset: 0.0,
+          numberOfSegments: 8,
+          sides: <BorderSide>[
+            BorderSide(color: Color(0xFFFF0000), width: 10.0),
+            BorderSide(color: Color(0xFF00FF00), width: 1.0),
+            BorderSide(color: Color(0xFF0000FF), width: 2.0),
+            BorderSide(color: Color(0xFFFF0000), width: 3.0),
+            BorderSide(color: Color(0xFF00FF00), width: 4.0),
+            BorderSide(color: Color(0xFF0000FF), width: 5.0),
+            BorderSide(color: Color(0xFFFF00000), width: 6.0),
+            BorderSide(color: Color(0xFF00FF00), width: 7.0),
+          ]),
       child: Container(
         width: 100,
         height: 100,
